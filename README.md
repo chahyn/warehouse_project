@@ -1,10 +1,10 @@
-# Smart Warehouse Monitoring System 🏭
+# Smart Warehouse Monitoring System
 
 **An AI-powered warehouse monitoring platform combining Computer Vision, Multi-Sensor Fusion, and Real-time Analytics for intelligent inventory management and safety monitoring.**
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Overview](#overview)
 - [Key Features](#key-features)
@@ -27,7 +27,7 @@
 
 ---
 
-## 🎯 Overview
+## Overview
 
 The Smart Warehouse Monitoring System is a comprehensive solution designed to revolutionize warehouse operations through artificial intelligence and sensor fusion. The system provides real-time monitoring, predictive analytics, and automated safety alerts to optimize inventory management and ensure worker safety.
 
@@ -41,32 +41,32 @@ The Smart Warehouse Monitoring System is a comprehensive solution designed to re
 
 ---
 
-## ✨ Key Features
+## Key Features
 
-### 🤖 AI-Powered Detection
+### AI-Powered Detection
 - **Object Detection**: YOLOv8-based detection of boxes, people, and forklifts
 - **Real-time Processing**: 30+ FPS with 92%+ average confidence
 - **Multi-class Recognition**: Simultaneous tracking of multiple object types
 
-### 📡 Multi-Sensor Fusion
+### Multi-Sensor Fusion
 - **Load Cell Sensors**: Weight-based inventory counting
 - **Ultrasonic Sensors**: Fill level and stack height monitoring
 - **Proximity Sensors**: Forklift and personnel safety detection
 - **Sensor Validation**: Cross-sensor verification for enhanced accuracy
 
-### 🚨 Safety Monitoring
+### Safety Monitoring
 - **Collision Risk Detection**: Real-time person-forklift proximity alerts
 - **Unsafe Stack Detection**: Automated detection of over-stacked inventory
 - **Misplacement Tracking**: Zone boundary violation monitoring
 - **Environmental Monitoring**: Lighting, temperature, and humidity tracking
 
-### 📊 Advanced Analytics
+### Advanced Analytics
 - **Predictive Inventory**: ARIMA-based forecasting for stock levels
 - **Anomaly Detection**: Isolation Forest algorithm for unusual patterns
 - **Trend Analysis**: Historical data visualization and insights
 - **Financial Impact**: ROI calculations and cost analysis
 
-### 💼 Enterprise Dashboard
+### Enterprise Dashboard
 - **Role-Based Access**: JWT + RBAC authentication (Admin, Executive, Manager, Operator)
 - **Real-time Monitoring**: Live updates with customizable refresh rates
 - **Interactive Visualizations**: Plotly-powered charts and graphs
@@ -74,49 +74,49 @@ The Smart Warehouse Monitoring System is a comprehensive solution designed to re
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
 │                     PHYSICAL LAYER                               │
-│  📷 Cameras  │  ⚖️ Load Cells  │  📡 Ultrasonic  │  🔍 Proximity │
+│  Cameras  │  Load Cells  │  Ultrasonic  │  Proximity            │
 └────────────────────────┬────────────────────────────────────────┘
                          │
                          ▼
 ┌─────────────────────────────────────────────────────────────────┐
 │                     DETECTION LAYER                              │
-│  🤖 YOLOv8 CV Model  │  📊 Sensor Simulators                    │
+│  YOLOv8 CV Model  │  Sensor Simulators                          │
 └────────────────────────┬────────────────────────────────────────┘
                          │
                          ▼
 ┌─────────────────────────────────────────────────────────────────┐
 │                     DATA FUSION LAYER                            │
-│  🔗 Sensor Fusion Algorithm  │  ✅ Anomaly Detection            │
+│  Sensor Fusion Algorithm  │  Anomaly Detection                  │
 └────────────────────────┬────────────────────────────────────────┘
                          │
                          ▼
 ┌─────────────────────────────────────────────────────────────────┐
 │                     DATABASE LAYER                               │
-│  💾 SQLite Database (cv_detections.db)                          │
+│  SQLite Database (cv_detections.db)                             │
 │  - CVDetections  - SensorFusionData  - AlertLogs                │
 └────────────────────────┬────────────────────────────────────────┘
                          │
                          ▼
 ┌─────────────────────────────────────────────────────────────────┐
 │                     ANALYTICS LAYER                              │
-│  📈 ARIMA Forecasting  │  🎯 ML Predictions  │  📊 KPI Metrics  │
+│  ARIMA Forecasting  │  ML Predictions  │  KPI Metrics           │
 └────────────────────────┬────────────────────────────────────────┘
                          │
                          ▼
 ┌─────────────────────────────────────────────────────────────────┐
 │                     PRESENTATION LAYER                           │
-│  🖥️ Streamlit Dashboard  │  📱 Web Interface                    │
+│  Streamlit Dashboard  │  Web Interface                          │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 🔧 Components
+## Components
 
 ### 1. Computer Vision Module
 **File**: `warehouse_cv_model.py`
@@ -158,7 +158,7 @@ Simulates multiple industrial sensors to complement computer vision data.
 
 #### Sensors Implemented:
 
-##### ⚖️ Load Cell Sensors
+##### Load Cell Sensors
 **Purpose**: Weight-based inventory counting
 
 **Returns**:
@@ -177,7 +177,7 @@ Simulates multiple industrial sensors to complement computer vision data.
 - Noise Range: ±2%
 - Auto-calibration detection
 
-##### 📡 Ultrasonic Sensors
+##### Ultrasonic Sensors
 **Purpose**: Fill level and stack height measurement
 
 **Returns**:
@@ -197,7 +197,7 @@ Simulates multiple industrial sensors to complement computer vision data.
 - Accuracy: 95%
 - Noise Range: ±3%
 
-##### 🔍 Proximity Sensors
+##### Proximity Sensors
 **Purpose**: Forklift and personnel safety monitoring
 
 **Returns**:
@@ -216,7 +216,7 @@ Simulates multiple industrial sensors to complement computer vision data.
 - Accuracy: 99%
 - False Positive Rate: 1%
 
-##### 🌡️ Environmental Sensors
+##### Environmental Sensors
 **Purpose**: Monitor conditions affecting sensor accuracy
 
 **Returns**:
@@ -240,42 +240,42 @@ Enterprise-grade Streamlit dashboard for monitoring and control.
 
 #### Dashboard Sections:
 
-##### 1️⃣ Executive Overview
+##### Executive Overview
 - **Real-time KPIs**: Total inventory, utilization rate, active alerts
 - **System Health**: Sensor status, database connectivity, processing speed
 - **Quick Stats**: 24-hour summaries and trend indicators
 
-##### 2️⃣ Inventory Analytics
+##### Inventory Analytics
 - **Current Stock Levels**: Per-zone box counts with capacity meters
 - **Historical Trends**: Time-series visualization of inventory changes
 - **Zone Comparison**: Multi-zone analytics with heatmaps
 - **Stock Movement**: Inflow/outflow tracking
 
-##### 3️⃣ AI & Predictions
+##### AI & Predictions
 - **ARIMA Forecasting**: 7-day inventory predictions
 - **Confidence Intervals**: Prediction accuracy ranges
 - **Anomaly Detection**: Isolation Forest algorithm highlights unusual patterns
 - **Seasonal Analysis**: Pattern recognition for demand cycles
 
-##### 4️⃣ Alert Management
+##### Alert Management
 - **Active Alerts**: Real-time collision risks, misplacements, unsafe stacks
 - **Priority Sorting**: Critical, High, Medium, Low classification
 - **Alert History**: Timeline view with resolution tracking
 - **Notification System**: Configurable alert thresholds
 
-##### 5️⃣ Operations Monitor
+##### Operations Monitor
 - **Live Sensor Data**: Real-time readings from all sensor types
 - **Sensor Fusion Results**: Combined accuracy metrics
 - **Processing Performance**: FPS, latency, confidence scores
 - **Environmental Conditions**: Live monitoring of warehouse conditions
 
-##### 6️⃣ Financial Impact
+##### Financial Impact
 - **Inventory Valuation**: Real-time asset value calculations
 - **Cost Analysis**: Holding costs, savings from automation
 - **ROI Metrics**: Return on investment tracking
 - **Sustainability**: Waste reduction, CO₂ impact, SDG alignment
 
-##### 7️⃣ User Management
+##### User Management
 - **Role-Based Access**: Four permission levels
   - **Operator**: View dashboards, acknowledge alerts
   - **Manager**: Full ops access, AI predictions, financial reports
@@ -286,7 +286,7 @@ Enterprise-grade Streamlit dashboard for monitoring and control.
 
 ---
 
-## 📊 Analytics & Intelligence
+## Analytics & Intelligence
 
 ### 1. Sensor Fusion Algorithm
 **Method**: Weighted Average with Anomaly Detection
@@ -341,7 +341,7 @@ fusion_result = {
 
 ---
 
-## 💾 Database Schema
+## Database Schema
 
 **Database File**: `cv_detections.db` (SQLite)
 
@@ -410,7 +410,7 @@ Alert and incident tracking tables
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 ### Core Technologies
 - **Computer Vision**: YOLOv8 (Ultralytics)
@@ -436,7 +436,7 @@ sqlite3                 # Database (built-in)
 
 ---
 
-## 📥 Installation
+## Installation
 
 ### Prerequisites
 - Python 3.8 or higher
@@ -473,7 +473,7 @@ python cv_detection_db_generator.py
 
 ---
 
-## 🚀 Usage
+## Usage
 
 ### 1. Generate Sample Data (Optional)
 ```bash
@@ -495,13 +495,13 @@ python warehouse_cv_model.py
 
 **Example Output**:
 ```
-🏭 SMART WAREHOUSE COMPUTER VISION SYSTEM
+SMART WAREHOUSE COMPUTER VISION SYSTEM
 ======================================================================
-🤖 Loading YOLO model: yolov8n.pt...
-✅ Model loaded successfully!
-📍 Monitoring Zone: A1 with Camera: CAM-01
+Loading YOLO model: yolov8n.pt...
+Model loaded successfully!
+Monitoring Zone: A1 with Camera: CAM-01
 
-📊 Frame 1250: Boxes=760, Misplaced=10, Unsafe=5, Collision=⚠️ YES
+Frame 1250: Boxes=760, Misplaced=10, Unsafe=5, Collision=WARNING YES
 ```
 
 ### 3. Run Sensor Simulation
@@ -511,16 +511,16 @@ python sensor_simulator.py
 
 Generates multi-sensor readings based on CV detections:
 ```
-🎛️  MULTI-SENSOR SIMULATION SYSTEM
+MULTI-SENSOR SIMULATION SYSTEM
 ======================================================================
-📊 Generating sensor data for 6 zones...
+Generating sensor data for 6 zones...
 
-🎯 Processing Zone: A1
-📷 Camera Count: 760
-⚖️  Load Cell: 758 units (1895.0kg)
-📡 Ultrasonic: 762 units (76.2% full)
-🔮 Fused Count: 760 (confidence: 95.2%)
-📊 Sensor Agreement: 98.5%
+Processing Zone: A1
+Camera Count: 760
+Load Cell: 758 units (1895.0kg)
+Ultrasonic: 762 units (76.2% full)
+Fused Count: 760 (confidence: 95.2%)
+Sensor Agreement: 98.5%
 ```
 
 ### 4. Launch Dashboard
@@ -536,7 +536,7 @@ streamlit run smart_warehouse_platform.py
 
 ---
 
-## 📖 API Reference
+## API Reference
 
 ### Computer Vision API
 
@@ -635,9 +635,7 @@ print(f"24h Avg: {analytics['last_24h']['avg_boxes']}")
 
 ---
 
-## 🎨 Dashboard Screenshots
-
-*(In a real README, you would include actual screenshots here)*
+## Dashboard Screenshots
 
 **Executive Overview**
 ```
@@ -650,15 +648,15 @@ print(f"24h Avg: {analytics['last_24h']['avg_boxes']}")
 **Live Monitoring**
 ```
 ┌─────────────────────────────────────────────────┐
-│  Zone A1  │  760 units  │  🟢 No Collision     │
-│  Zone B2  │  850 units  │  🔴 Unsafe Stack     │
-│  Zone C3  │  420 units  │  🟡 Misplacement     │
+│  Zone A1  │  760 units  │  No Collision        │
+│  Zone B2  │  850 units  │  Unsafe Stack        │
+│  Zone C3  │  420 units  │  Misplacement        │
 └─────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 🔐 Security & Authentication
+## Security & Authentication
 
 - **JWT Tokens**: Secure session management
 - **RBAC**: Role-Based Access Control
@@ -668,7 +666,7 @@ print(f"24h Avg: {analytics['last_24h']['avg_boxes']}")
 
 ---
 
-## 📈 Performance Optimization
+## Performance Optimization
 
 ### System Requirements
 - **Minimum**: 4GB RAM, 2-core CPU, Integrated GPU
@@ -683,7 +681,7 @@ print(f"24h Avg: {analytics['last_24h']['avg_boxes']}")
 
 ---
 
-## 🌍 Sustainability Impact
+## Sustainability Impact
 
 Aligned with UN Sustainable Development Goals:
 
@@ -699,7 +697,7 @@ Aligned with UN Sustainable Development Goals:
 
 ---
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -730,24 +728,24 @@ streamlit run smart_warehouse_platform.py --server.port 8502
 
 ---
 
-## 🗺️ Roadmap
+## Roadmap
 
 ### Version 2.0 (Planned)
-- [ ] Multi-camera fusion support
-- [ ] Cloud deployment (AWS/Azure)
-- [ ] Mobile app (iOS/Android)
-- [ ] Real RFID integration
-- [ ] Advanced ML models (Faster R-CNN, EfficientDet)
+- Multi-camera fusion support
+- Cloud deployment (AWS/Azure)
+- Mobile app (iOS/Android)
+- Real RFID integration
+- Advanced ML models (Faster R-CNN, EfficientDet)
 
 ### Version 3.0 (Future)
-- [ ] Edge device deployment (Jetson Nano)
-- [ ] Blockchain inventory tracking
-- [ ] AR overlay for warehouse workers
-- [ ] Voice command interface
+- Edge device deployment (Jetson Nano)
+- Blockchain inventory tracking
+- AR overlay for warehouse workers
+- Voice command interface
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Please follow these steps:
 
@@ -765,13 +763,13 @@ We welcome contributions! Please follow these steps:
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 👥 Authors & Acknowledgments
+## Authors & Acknowledgments
 
 **Project Team**:
 - Computer Vision Module: Your Name
@@ -785,7 +783,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 📞 Contact & Support
+## Contact & Support
 
 - **Email**: your.email@example.com
 - **GitHub Issues**: [Report a bug](https://github.com/yourusername/smart-warehouse-system/issues)
@@ -794,7 +792,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 📊 Project Statistics
+## Project Statistics
 
 ![Lines of Code](https://img.shields.io/badge/Lines%20of%20Code-3000%2B-blue)
 ![Python Version](https://img.shields.io/badge/Python-3.8%2B-green)
@@ -803,7 +801,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**⭐ If you find this project useful, please consider giving it a star!**
+**If you find this project useful, please consider giving it a star!**
 
 ---
 
